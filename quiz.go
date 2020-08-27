@@ -15,6 +15,12 @@ func main() {
 
 	questions, answers := getQuestions(file)
 
+	fmt.Printf("You have %d seconds to answer %d questions\n", timerlength, len(questions))
+
+	time.Sleep(3 * time.Second)
+
+	fmt.Printf("GO!\n")
+
 	quiztimer := time.NewTimer(time.Duration(timerlength) * time.Second)
 
 	var score, total int = 0, len(questions)
